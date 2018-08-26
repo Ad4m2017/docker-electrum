@@ -7,7 +7,7 @@ RUN pip3 install https://download.electrum.org/${ELECTRUM_VERSION}/Electrum-${EL
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 7000
 CMD ["electrum"]
