@@ -7,15 +7,15 @@ trap 'pkill -TERM -P1; electrum daemon stop; exit 0' SIGTERM
 # Set config
 # electrum setconfig rpcuser ${ELECTRUM_USER}
 # electrum setconfig rpcpassword ${ELECTRUM_PASSWORD}
-electrum setconfig rpcuser test
-electrum setconfig rpcpassword test
-electrum setconfig rpchost 0.0.0.0
-electrum setconfig rpcport 7000
+/usr/local/bin/electrum setconfig rpcuser test
+/usr/local/bin/electrum setconfig rpcpassword test
+/usr/local/bin/electrum setconfig rpchost 0.0.0.0
+/usr/local/bin/electrum setconfig rpcport 7000
 
 # XXX: Check load wallet or create
 
 # Run application
-electrum daemon start
+/usr/local/bin/electrum daemon start
 
 # Wait forever
 while true; do
