@@ -9,5 +9,5 @@ COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 
 EXPOSE 7000
-CMD ["electrum"]
+CMD ["/usr/local/bin/electrum"]
 
